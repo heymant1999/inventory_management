@@ -4,6 +4,7 @@ import { fetchInventoryFailure, fetchInventoryRequest, fetchInventorySuccess } f
 import { fetchInventoryData } from "./services/inventory";
 import { useEffect } from "react";
 import NavBar from "./components/NavBar";
+import Dashboard from "./pages/Dashboard";
 function App() {
   const dispatch = useDispatch();
   const getInventroyData = async () => {
@@ -21,9 +22,7 @@ function App() {
   }, []);
 
   return (
-  <>
-  <NavBar/>
-  </>
+  <Dashboard/>
   );
 }
 
