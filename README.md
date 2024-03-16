@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Inventory Management Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple inventory management web application built using React, JavaScript, Redux for state management, Tailwind CSS for styling, and Material UI components. It allows users to view a list of products, edit product details, delete products, and disable products based on their roles (admin or user).
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Admin View**:
+  - View all products in a table.
+  - Edit product details.
+  - Delete products.
+  - Disable products.
 
-### `npm start`
+- **User View**:
+  - View all products in a table.
+  - Product action buttons are disabled.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## API Used
 
-### `npm test`
+- **Endpoint**: [https://dev-0tf0hinghgjl39z.api.raw-labs.com/inventory](https://dev-0tf0hinghgjl39z.api.raw-labs.com/inventory)
+- **Method**: GET
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Top Widgets
 
-### `npm run build`
+- Total Products
+- Total Store Value
+- Out of Stock Products
+- Number of Categories
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Additional Notes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- State management is handled using Redux.
+- Tailwind CSS is used for styling.
+- Material UI components are utilized for enhanced UI elements.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to Run
 
-### `npm run eject`
+1. Clone this repository: `git clone <repository-url>`
+2. Install dependencies: `npm install`
+3. Run the application: `npm start`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Github Repository
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+https://github.com/heymant1999/inventory_management.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Live Demo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+http://inventory-management-app.s3-website.ap-south-1.amazonaws.com
 
-## Learn More
+## Summary
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project demonstrates a simple inventory management web application built with React, Redux, Tailwind CSS, and Material UI components. It showcases efficient state management, intuitive user interface, and seamless user experience.
