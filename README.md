@@ -35,7 +35,7 @@ This is a simple inventory management web application built using React, JavaScr
 
 ## How to Run
 
-1. Clone this repository: `git clone <repository-url>`
+1. Clone this repository: `git clone <https://github.com/heymant1999/inventory_management.git>`
 2. Install dependencies: `npm install`
 3. Run the application: `npm start`
 
