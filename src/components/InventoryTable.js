@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoEye } from "react-icons/io5";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchInventorySuccess } from "../store/actions/inventoryActions";
+import EditProductModal from "./EditProductModal";
+import LoadingSpinner from "./Common/LoadingSpinner";
+import ErrorAlert from "./Common/ErrorAlert";
 
 // Header content for the inventory table
 const tableHeaderContent = [
@@ -15,9 +18,20 @@ const tableHeaderContent = [
 ];
 
 export const InventoryTable = () => {
-  const { inventory } = useSelector((state) => state.inventory);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [selectedItemIndex, setSelectedItemIndex] = useState(null);
+  const { inventory, loading, error } = useSelector((state) => state.inventory);
   const { isUser } = useSelector((state) => state.role);
   const dispatch = useDispatch();
+  const showModal = (index) => {
+    setSelectedItemIndex(index);
+    setShowEditModal(true);
+  };
+
+  const hideModal = () => {
+    setShowEditModal(false);
+    setSelectedItemIndex(null);
+  };
 
   //function to delete row
   const deleteRow = (name) => {
@@ -31,7 +45,17 @@ export const InventoryTable = () => {
     updatedInventory[index] = { ...updatedInventory[index], disabled: true };
     dispatch(fetchInventorySuccess(updatedInventory));
   };
+
+  if(loading){
+    return <LoadingSpinner/>
+  }
+
+  if(error){
+    return <ErrorAlert message={"Something went wrong while fetching inventory data."}/>
+  }
+
   return (
+    <>
     <table
       className="min-w-[98%] bg-neutral-800 rounded-xl mx-3"
       aria-label="simple table"
@@ -82,6 +106,7 @@ export const InventoryTable = () => {
                     className={`cursor-pointer ${
                       !isUser ? "text-green-700" : "text-white"
                     }`}
+                    onClick={()=>showModal(index)}
                   />
                 </button>
                 <button disabled={isUser}>
@@ -106,5 +131,7 @@ export const InventoryTable = () => {
         ))}
       </tbody>
     </table>
+     {showEditModal && <EditProductModal index={selectedItemIndex} onClose={hideModal}/>}
+    </>
   );
 };

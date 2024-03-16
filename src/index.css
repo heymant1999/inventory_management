@@ -5,3 +5,13 @@
 body {
   background-color: #171717;
 }
+
+/* To hide increment/decrement button on number type input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -11,10 +11,20 @@ const NavBar = () => {
     <div className="text-gray-300 border-b border-neutral-700">
       <div className="py-2 flex justify-end px-4">
         <Stack direction="row" spacing={1} alignItems="center">
-          <Typography>admin</Typography> 
-          <Switch {...label} defaultChecked color="success" onChange={()=> dispatch(switchRole())}/>
+          <Typography>admin</Typography>
+          <Switch
+            {...label}
+            defaultChecked
+            color="success"
+            onChange={() => dispatch(switchRole())}
+          />
           <Typography>user</Typography>
-          <Divider orientation="vertical" variant="middle" flexItem className="bg-neutral-700"/>
+          <Divider
+            orientation="vertical"
+            variant="middle"
+            flexItem
+            className="bg-neutral-700"
+          />
           <IoExitOutline />
         </Stack>
       </div>
