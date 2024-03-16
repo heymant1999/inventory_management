@@ -3,6 +3,7 @@ import "./index.css"
 import { fetchInventoryFailure, fetchInventoryRequest, fetchInventorySuccess } from "./store/actions/inventoryActions";
 import { fetchInventoryData } from "./services/inventory";
 import { useEffect } from "react";
+import NavBar from "./components/NavBar";
 function App() {
   const dispatch = useDispatch();
   const getInventroyData = async () => {
@@ -20,7 +21,9 @@ function App() {
   }, []);
 
   return (
-   <div className="bg-blue-700">App</div>
+  <>
+  <NavBar/>
+  </>
   );
 }
 
