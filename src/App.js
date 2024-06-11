@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     getInventroyData();
-  }, []);
+  }, [getInventroyData]);
 
   return (
   <Dashboard/>

@@ -58,7 +58,7 @@ const InventorySummary = () => {
 
   useEffect(() => {
     calculateInventorySummaryData();
-  }, [inventory]);
+  }, [inventory, calculateInventorySummaryData]);
 
   return (
     <>
