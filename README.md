@@ -50,3 +50,6 @@ http://inventory-management-app.s3-website.ap-south-1.amazonaws.com
 ## Summary
 
 This project demonstrates a simple inventory management web application built with React, Redux, Tailwind CSS, and Material UI components. It showcases efficient state management, intuitive user interface, and seamless user experience.
+
+
+Github Actions configured
