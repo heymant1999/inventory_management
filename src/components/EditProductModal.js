@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchInventoryData } from "../services/inventory";
 import { fetchInventorySuccess } from "../store/actions/inventoryActions";
 
 const EditProductModal = ({ onClose, index }) => {

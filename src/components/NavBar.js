@@ -1,7 +1,7 @@
 import { Divider, Stack, Switch, Typography } from "@mui/material";
 import React from "react";
 import { IoExitOutline } from "react-icons/io5";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, } from "react-redux";
 import { switchRole } from "../store/actions/roleActions";
 const label = { inputProps: { "aria-label": "Color switch demo" } };
 

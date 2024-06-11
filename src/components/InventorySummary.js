@@ -62,7 +62,7 @@ const InventorySummary = () => {
 
   return (
     <>
-      <div className="text-white text-4xl mx-4 mt-5">Inventory Stats</div>
+      <div className="text-white text-4xl mx-4 mt-5">Inventory Status</div>
       <div className="flex justify-between py-5 px-1">
         {summaryData.map((item, index) => (
           <InventorySummaryCard
